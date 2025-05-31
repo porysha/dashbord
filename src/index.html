@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>داشبورد من</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Vazirmatn", sans-serif;
+            }
+            .active {
+                background-color: #334155;
+                color: white;
+                border-radius: 0.5rem;
+            }
+            .menu-item {
+                transition: all 0.3s ease;
+            }
+            .menu-item:hover {
+                background-color: #475569;
+                color: white;
+                border-radius: 0.5rem;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 relative">
+        <!-- پس‌زمینه تاریک هنگام باز شدن منو -->
+        <div
+            class="black-bg fixed inset-0 bg-black/60 z-10 invisible lg:hidden"
+        ></div>
+
+        <div class="flex min-h-screen">
+            <!-- سایدبار -->
+            <aside
+                class="sidebarshow fixed lg:relative z-20 bg-slate-900 w-64 text-gray-400 transition-all duration-300 ease-in -right-full invisible lg:visible lg:right-0"
+            >
+                <div class="flex justify-end p-4 lg:hidden">
+                    <ion-icon
+                        name="close-outline"
+                        class="close-btn text-3xl text-white cursor-pointer hover:text-slate-400"
+                    ></ion-icon>
+                </div>
+                <div class="p-6 text-white text-xl font-bold">
+                    <img
+                        src="https://i.ibb.co/q9TvkMw/photo-2022-05-27-23-23-28.jpg"
+                        class="w-12 h-12 rounded-full mx-auto mb-2"
+                    />
+                    <p class="text-center">داشبورد حرفه‌ای</p>
+                </div>
+                <nav class="px-4 mt-4">
+                    <ul class="space-y-2">
+                        <li
+                            class="menu-item active flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="home-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>داشبورد</span>
+                        </li>
+                        <li
+                            class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="people-circle-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>تیم</span>
+                        </li>
+                        <li
+                            class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="folder-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>پروژه‌ها</span>
+                        </li>
+                        <li
+                            class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="calendar-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>تقویم</span>
+                        </li>
+                        <li
+                            class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="document-text-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>اسناد</span>
+                        </li>
+                        <li
+                            class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                        >
+                            <ion-icon
+                                name="reader-outline"
+                                class="text-xl"
+                            ></ion-icon>
+                            <span>گزارش‌ها</span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="px-4 mt-10">
+                    <h3 class="text-sm text-gray-500 mb-2">تیم شما</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                            <span
+                                class="bg-slate-700 w-6 h-6 flex items-center justify-center text-sm rounded-lg border border-slate-500"
+                                >پ</span
+                            >
+                            <span>پوریا باقری</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span
+                                class="bg-slate-700 w-6 h-6 flex items-center justify-center text-sm rounded-lg border border-slate-500"
+                                >ی</span
+                            >
+                            <span>یوسف نبی</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span
+                                class="bg-slate-700 w-6 h-6 flex items-center justify-center text-sm rounded-lg border border-slate-500"
+                                >آ</span
+                            >
+                            <span>آیت الله جنتی</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="absolute bottom-8 w-full px-4">
+                    <div
+                        class="menu-item flex items-center gap-2 p-2 cursor-pointer"
+                    >
+                        <ion-icon
+                            name="settings-outline"
+                            class="text-xl"
+                        ></ion-icon>
+                        <span>تنظیمات</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- بخش اصلی -->
+            <main class="flex-1">
+                <header
+                    class="flex justify-between items-center p-4 border-b bg-white shadow-sm"
+                >
+                    <div class="flex items-center gap-4">
+                        <ion-icon
+                            name="menu-outline"
+                            class="menu-btn text-3xl cursor-pointer text-slate-700 hover:text-black lg:hidden"
+                        ></ion-icon>
+                        <div class="relative w-full max-w-md">
+                            <input
+                                type="text"
+                                placeholder="جستجو..."
+                                class="search-box w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                            <ion-icon
+                                name="search-outline"
+                                class="absolute left-3 top-2.5 text-slate-500"
+                            ></ion-icon>
+                            <ion-icon
+                                name="close-outline"
+                                class="rm-search hidden absolute left-10 top-2.5 text-red-500 cursor-pointer"
+                            ></ion-icon>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 relative">
+                        <ion-icon
+                            name="notifications-outline"
+                            class="text-2xl text-slate-600 cursor-pointer hover:text-black"
+                        ></ion-icon>
+                        <div
+                            class="profile cursor-pointer flex items-center gap-2"
+                        >
+                            <img
+                                src="https://i.ibb.co/q9TvkMw/photo-2022-05-27-23-23-28.jpg"
+                                class="w-10 h-10 rounded-full"
+                            />
+                            <span class="text-slate-800 hidden md:block"
+                                >پوریا باقری</span
+                            >
+                            <ion-icon
+                                name="chevron-down-outline"
+                                class="text-slate-600"
+                            ></ion-icon>
+                        </div>
+                        <div
+                            class="profile-items hidden absolute top-12 left-0 bg-white shadow-md rounded-lg w-32 text-sm"
+                        >
+                            <a href="#" class="block p-2 hover:bg-gray-100"
+                                >پروفایل</a
+                            >
+                            <a href="#" class="block p-2 hover:bg-gray-100"
+                                >خروج</a
+                            >
+                        </div>
+                    </div>
+                </header>
+
+                <section class="p-6">
+                    <h1 class="text-2xl font-bold text-slate-700 mb-4">
+                        خوش آمدی پوریا 👋
+                    </h1>
+                    <p class="text-gray-600">
+                        این پروژه برای نمونه‌کار حرفه‌ای طراحی شده است.
+                    </p>
+                </section>
+            </main>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
